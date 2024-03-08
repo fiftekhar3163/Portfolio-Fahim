@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+:root {
+  --theme-color: #002374;
+  --theme-background-color: #f8f8f8;
+  --theme-font-color: #fff;
+  --theme-button-color: #002374;
+  --theme-button-hover-color: #8000ff;
+  --theme-button-highlight-color: #8000ff;
+  --theme-font-highlight-color: #8000ff;
+  --theme-header-height: 60px;
+  --theme-footer-height: 60px;
+  --theme-border-radius: 5px;
+  --theme-font-family: "Poppins", "Open Sans", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--theme-font-family);
+  font-weight: 300;
+  background-color: var(--theme-background-color);
+}
+
+.container {
+  width: min(100% - 30px, 1140px);
+  margin-inline: auto;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  line-height: 1.9;
+}
+
+::placeholder {
+  color: #ccc;
+}
+
+/* 
+    Utility classes 
+*/
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-sb {
+  justify-content: space-between;
+}
+
+.flex-sa {
+  justify-content: space-around;
+}
+
+.flex-se {
+  justify-content: space-evenly;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-center {
+  place-items: center;
+}
+
+.gap-50 {
+  gap: 50px;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+.gap-40 {
+  gap: 40px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.full-height {
+  min-height: calc(
+    100vh - var(--theme-header-height) - var(--theme-footer-height)
+  );
+}
+
+.highlight {
+  color: var(--theme-button-highlight-color);
+}
+
+.highlight a {
+  color: var(--theme-button-highlight-color);
+}
+
+.ct-25 {
+  flex: 0 0 25%;
+  min-width: 25%;
+}
+
+.ct-50 {
+  flex: 0 0 50%;
+  min-width: 50%;
+}
+
+/* 
+    Header 
+*/
+
+header {
+  width: 100%;
+  height: var(--theme-header-height);
+  position: absolute;
+  /* 
+      background-color: var(--theme-color); 
+      To define the color and transparency seperately? 
+    */
+  background-color: rgba(0, 35, 116, 0.85);
+  z-index: 99;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  color: var(--theme-font-color);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: var(--theme-header-height);
+}
+
+header h1 a {
+  color: var(--theme-font-color);
+  text-decoration: none;
+}
+
+header nav ul li {
+  line-height: var(--theme-header-height);
+  list-style: none;
+  cursor: default;
+}
+
+header nav ul li a {
+  color: var(--theme-font-color);
+  font-size: 17px;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.25s ease-in-out;
+}
+
+header nav ul li a:hover {
+  color: #b972ff;
+}
+
+header .highlight a {
+  color: #b972ff;
+}
+
+/* 
+    Main 
+*/
+
+main {
+  min-height: calc(
+    100vh - var(--theme-header-height) - var(--theme-footer-height)
+  );
+}
+
+.theme-button {
+  color: var(--theme-font-color);
+  background-color: var(--theme-button-color);
+  display: inline-block;
+  white-space: nowrap;
+  padding: 10px 30px;
+  border-radius: var(--theme-border-radius);
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  border-left: 10px solid var(--theme-button-highlight-color);
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+}
+
+.theme-button:hover {
+  color: var(--theme-font-color);
+  background-color: var(--theme-button-hover-color);
+}
+
+.theme-button a {
+  color: var(--theme-font-color);
+  text-decoration: none;
+}
+
+/* 
+    Footer 
+*/
+
+footer {
+  color: var(--theme-font-color);
+  background-color: var(--theme-color);
+  box-shadow: -2px -2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+footer .contact {
+  height: var(--theme-footer-height);
+}
+
+footer .contact li {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  list-style: none;
+  line-height: 1;
+  border-radius: 50%;
+  border: 1.5px solid #ededed;
+}
+
+footer .contact i {
+  color: var(--theme-font-color);
+  font-size: 14px;
+}
+
+footer .copyright {
+  font-size: 12px;
+  letter-spacing: 1px;
+  height: var(--theme-footer-height);
+  line-height: var(--theme-footer-height);
+  text-align: right;
+}

@@ -351,5 +351,5 @@ footer .copyright {
   letter-spacing: 1px;
   height: var(--theme-footer-height);
   line-height: var(--theme-footer-height);
-  text-align: right;
+  text-align: center;
 }
